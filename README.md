@@ -1,141 +1,260 @@
-# 👥 Employee Attrition & Retention Data Analysis
+👥 Employee Attrition & Retention Data Analysis
 
-**Employee Attrition & Retention Data Analysis** is a Python-based data analytics project focused on analyzing **1,020 employee records** across demographic, organizational, salary, performance, and work-mode attributes. The project uses **Python and Pandas** to load, clean, transform, filter, analyze, and export employee data.
+Employee Attrition & Retention Data Analysis is a Python-based data analytics project focused on analyzing 1,020 employee records across demographic, organizational, salary, performance, employment-status, and remote-work attributes. The project uses Python, Pandas, and Matplotlib to inspect, clean, transform, analyze, and visualize employee data.
 
-The analysis focuses on variables such as **age, department/region, employee status, joining date, salary, performance score, and remote work status**, transforming a messy employee dataset into a structured and analysis-ready dataset.
+The analysis focuses on variables such as age, department/region, employee status, joining date, salary, performance score, and remote work, transforming a messy employee dataset into a structured and analysis-ready dataset.
 
----
+Note: This project performs employee data analysis and visualization. It does not build a machine-learning attrition prediction model.
+
 ![alt text](<visualization/Employee Attrition & Retention Report.png>)
-## 🚀 Core Features
+
+🚀 Core Features
 
 The project implements the following data analytics workflow:
 
-### 1. **Data Loading & Inspection**
+1. Data Loading & Inspection
 
-* Loaded the raw employee dataset using Pandas.
-* Inspected the first and last records.
-* Checked dataset dimensions and total number of elements.
-* Examined column names, indexes, and data types.
-* Used `df.info()` and `df.describe()` for initial dataset understanding.
+Loaded the raw employee dataset using Pandas.
 
-### 2. **Data Filtering & Selection**
+Inspected the first and last records.
 
-* Selected specific employee columns for analysis.
-* Used `iloc` and `loc` for row-level selection.
-* Filtered employees based on salary and age.
-* Filtered employees by specific department and region.
-* Applied multiple conditions using `AND` and `OR`.
-* Used `isin()`, `between()`, and `query()` for efficient filtering.
+Checked dataset shape and size.
 
-### 3. **Data Transformation**
+Examined column names, indexes, and data types.
 
-* Created a `bonus` column with a fixed bonus value.
-* Calculated `Total_salary` using salary and bonus.
-* Updated individual employee salary values.
-* Updated department/region values where required.
-* Prepared the dataset for further analysis.
+Used info() and describe() to understand the dataset.
 
-### 4. **Missing Value Handling**
+2. Data Selection & Filtering
 
-* Identified missing values using Pandas.
-* Calculated missing-value counts.
-* Calculated the mean of `Age`.
-* Used mean-based filling for missing age values.
-* Calculated the median of `Salary`.
-* Used median-based filling for missing salary values.
-* Checked the mode of categorical department/region values.
-* Removed rows containing missing values using `dropna()`.
+Selected required columns for analysis.
 
-### 5. **Duplicate Record Handling**
+Used iloc and loc for row-level selection.
 
-* Identified duplicate records using `duplicated()`.
-* Counted duplicate records.
-* Displayed duplicate rows for inspection.
-* Removed duplicate records using `drop_duplicates()`.
-* Validated the resulting dataset shape.
+Filtered employees based on salary and age.
 
-### 6. **Descriptive Statistics**
+Filtered employees by department/region.
 
-* Calculated total salary.
-* Calculated average and median salary.
-* Identified minimum and maximum salary.
-* Calculated salary standard deviation and variance.
-* Identified employees with the highest and lowest salaries.
-* Analyzed department/region frequency.
-* Examined remote-work distribution.
+Applied multiple conditions using AND and OR.
 
-### 7. **Data Export**
+Used isin(), between(), and query() for filtering.
 
-* Exported the cleaned employee dataset into CSV format.
-* Exported the cleaned dataset into Excel format.
-* Exported the cleaned dataset into JSON format.
+Sorted employees by age, salary, department/region, and name.
 
----
+3. Data Transformation
 
-## 📊 Key Analysis Areas
+Created a bonus column with a fixed bonus value of 5000.
 
-| Analysis Area            | Description                                                          |
-| :----------------------- | :------------------------------------------------------------------- |
-| **Employee Information** | Analyzed employee IDs, names, age, department/region and status      |
-| **Salary Analysis**      | Examined salary totals, averages, median, minimum and maximum values |
-| **Department & Region**  | Analyzed employee distribution across departments and regions        |
-| **Employee Status**      | Examined Active, Pending and Inactive employee records               |
-| **Performance**          | Examined employee performance score categories                       |
-| **Remote Work**          | Analyzed remote and non-remote employee records                      |
-| **Missing Values**       | Identified and handled missing employee data                         |
-| **Duplicate Records**    | Detected and removed duplicate employee records                      |
-| **Data Filtering**       | Applied conditional filtering based on employee attributes           |
-| **Data Transformation**  | Created bonus and total salary fields                                |
+Created Total_salary using salary and bonus.
 
----
+Updated selected employee salary values.
 
-## 🛠️ Technology Stack
+Updated a selected department/region value.
 
-| Category           | Technology                 | Description                                                    |
-| :----------------- | :------------------------- | :------------------------------------------------------------- |
-| **Language**       | **Python**                 | Core programming and data analysis language                    |
-| **Data Analysis**  | **Pandas**                 | Data loading, cleaning, filtering, transformation and analysis |
-| **Dataset**        | **Employee Records**       | 1,020 employee records across 12 columns                       |
-| **Notebook**       | **Jupyter / Google Colab** | Environment used for performing the analysis                   |
-| **Output Formats** | **CSV, Excel, JSON**       | Export formats for the cleaned employee dataset                |
+Prepared the dataset for analysis and visualization.
 
-## The notebook loads the dataset using Pandas and works with a **1,020 × 12** structure.
+4. Missing Value Handling
 
-## 📂 Project Structure
+Identified missing values using Pandas.
 
-```text
-employee-attrition-retention/
+Calculated missing-value counts.
+
+Calculated the mean of Age.
+
+Demonstrated mean-based filling for missing age values.
+
+Calculated the median of Salary.
+
+Demonstrated median-based filling for missing salary values.
+
+Checked the mode of Department_Region.
+
+Removed rows containing missing values using dropna().
+
+5. Duplicate Record Handling
+
+Checked duplicate records using duplicated().
+
+Counted duplicate records.
+
+Displayed duplicate rows for inspection.
+
+Removed duplicate records using drop_duplicates().
+
+Checked the final dataset shape after duplicate removal.
+
+6. Descriptive Statistics
+
+Calculated total salary.
+
+Calculated average and median salary.
+
+Identified minimum and maximum salary.
+
+Calculated salary standard deviation and variance.
+
+Identified employees with the highest and lowest salary.
+
+Analyzed department/region frequency.
+
+Analyzed remote-work distribution.
+
+Filtered employees above and below the average salary.
+
+7. Data Visualization
+
+Created multiple visualizations using Matplotlib to communicate employee patterns:
+
+Number of Employees by Department/Region
+
+Average Salary by Age
+
+Salary Distribution
+
+Age vs Total Salary
+
+Employee Work Distribution
+
+Employee Performance Score
+
+Employee Status Distribution
+
+8. Clean Dataset Export
+
+The cleaned employee dataset was exported into:
+
+CSV
+
+Excel
+
+JSON
+
+📈 Key Analysis Areas
+
+Analysis Area
+
+Description
+
+Employee Demographics
+
+Examined employee age and basic employee information
+
+Department & Region
+
+Analyzed employee distribution across department/region combinations
+
+Employee Status
+
+Examined Active, Pending, and Inactive employees
+
+Salary Analysis
+
+Calculated salary statistics and identified salary patterns
+
+Total Salary
+
+Added a fixed bonus and calculated total salary
+
+Performance
+
+Analyzed employee performance-score categories
+
+Remote Work
+
+Examined remote and non-remote employee distribution
+
+Age & Salary
+
+Visualized the relationship between age and total salary
+
+Data Quality
+
+Identified and handled missing values and duplicate records
+
+🛠️ Technology Stack
+
+Category
+
+Technology
+
+Description
+
+Language
+
+Python
+
+Core programming and data analysis language
+
+Data Analysis
+
+Pandas
+
+Data loading, cleaning, filtering, transformation, and analysis
+
+Visualization
+
+Matplotlib
+
+Charts and graphical analysis
+
+Dataset
+
+Employee Records
+
+1,020 employee records across 12 columns
+
+Notebook
+
+Jupyter Notebook / Google Colab
+
+Environment used for analysis
+
+Output Formats
+
+CSV, Excel, JSON
+
+Cleaned dataset export formats
+
+📂 Project Structure
+
+Employee_Attrition_and_Retention/
 │
 ├── data/
-│   └── Messy_Employee_dataset.csv       <-- Raw employee dataset
+│   ├── raw dataset/
+│   │   └── Messy_Employee_dataset.csv
+│   │
+│   └── cleaned dataset/
+│       ├── Cleaned_Employee_dataset.csv
+│       ├── Cleaned_Employee_dataset.xlsx
+│       └── Cleaned_Employee_dataset.json
 │
-├── notebooks/
+├── notebook/
 │   └── Employee_Attrition_and_Retention_Report.ipynb
-│                                           <-- Complete analysis notebook
 │
-├── output/
-│   ├── Cleaned_Employee_dataset.csv
-│   ├── Cleaned_Employee_dataset.xlsx
-│   └── Cleaned_Employee_dataset.json
+├── presentation/
+│   └── Employee_Attrition_and_Retention_Report.pptx
 │
-├── README.md
-└── requirements.txt
-```
+├── visualization/
+│   ├── Age vs Total Salary.png
+│   ├── Average Salary by Age.png
+│   ├── Employees Performance Score.png
+│   ├── Employees Status Distribution.png
+│   ├── Employees Work Distribution.png
+│   ├── Number of Employees by Department.png
+│   └── Salary Distribution.png
+│
+└── README.md
 
----
+🔄 Data Analytics Workflow
 
-## 🔄 Data Analytics Workflow
-
-```text
 Raw Employee Dataset
         ↓
 Data Loading
         ↓
 Data Inspection
         ↓
-Data Filtering & Selection
+Data Selection & Filtering
         ↓
-Missing Value Identification
+Missing Value Analysis
         ↓
 Missing Value Handling
         ↓
@@ -149,18 +268,16 @@ Descriptive Statistics
         ↓
 Employee & Salary Analysis
         ↓
-Cleaned Dataset Export
-```
+Data Visualization
+        ↓
+Clean Dataset Export
 
----
+🔍 Dataset Overview
 
-## 🔍 Dataset Overview
+The dataset contains 1,020 employee records and 12 columns.
 
-The employee dataset contains **1,020 records and 12 columns**.
+The main columns are:
 
-The main columns include:
-
-```text
 Employee_ID
 First_Name
 Last_Name
@@ -173,110 +290,64 @@ Email
 Phone
 Performance_Score
 Remote_Work
-```
 
-The notebook's dataset inspection shows fields covering employee identification, demographic information, department/region, employment status, joining date, salary, contact information, performance score, and remote-work status.
+Dataset Characteristics
 
----
+Employee_ID contains unique employee identifiers.
 
-## 🧹 Data Cleaning & Transformation
+Age contains employee age values.
 
-The raw employee dataset was prepared for analysis through multiple preprocessing steps.
+Department_Region combines department and region information.
 
-### Missing Values
+Status contains employee employment-status categories.
 
-The notebook checks for missing values using:
+Join_Date contains employee joining dates.
 
-```python
+Salary contains employee salary information.
+
+Performance_Score contains performance categories.
+
+Remote_Work indicates whether an employee works remotely.
+
+🧹 Data Cleaning & Transformation
+
+The raw dataset contains missing values and duplicate records, so preprocessing was performed before the final analysis.
+
+Missing Values
+
+Missing values were identified using:
+
 df.isnull()
 df.isnull().sum()
-```
 
-Missing values were investigated in columns such as `Age` and `Salary`. The notebook also demonstrates:
+The notebook calculates:
 
-```python
 df["Age"].mean()
-df["Age"].fillna(df["Age"].mean())
-
 df["Salary"].median()
-df["Salary"].fillna(df["Salary"].median())
-```
+df["Department_Region"].mode()
 
-Finally, rows containing missing values were removed using:
+Mean-based handling was demonstrated for Age, and median-based handling was demonstrated for Salary.
 
-```python
+Rows containing missing values were ultimately removed using:
+
 df.dropna(inplace=True)
-```
 
-### Duplicate Records
+Duplicate Records
 
 Duplicate records were checked using:
 
-```python
 df.duplicated()
 df.duplicated().sum()
 df[df.duplicated()]
-```
 
-Duplicate records were then removed using:
+Duplicates were removed using:
 
-```python
 df.drop_duplicates(inplace=True)
-```
 
-The notebook subsequently checks the dataset shape to validate the result.
+💰 Salary Analysis
 
-### Data Transformation
+Salary analysis was performed using Pandas descriptive-statistics functions.
 
-A bonus column was created and used to calculate total salary:
-
-```python
-df['bonus'] = 5000
-
-df['Total_salary'] = df['Salary'] + df['bonus']
-```
-
-The notebook also demonstrates updating individual employee values and department/region information.
-
----
-
-## 📋 Employee Data Exploration
-
-Exploratory analysis was performed to understand employee records and their characteristics.
-
-Key operations included:
-
-```python
-df.head()
-df.tail()
-df.shape
-df.size
-df.columns
-df.index
-df.dtypes
-df.info()
-df.describe()
-```
-
-The notebook also performs row and column selection using:
-
-```python
-df.iloc[10:20]
-df.iloc[67]
-df.loc[2]
-```
-
-These operations help inspect individual employee records and understand the overall structure of the dataset.
-
----
-
-## 💰 Salary Analysis
-
-Salary analysis was performed using descriptive statistical operations.
-
-Key calculations included:
-
-```python
 df["Salary"].sum()
 df["Salary"].mean()
 df["Salary"].median()
@@ -284,218 +355,256 @@ df["Salary"].max()
 df["Salary"].min()
 df["Salary"].std()
 df["Salary"].var()
-```
 
 The project also identifies employees with the highest and lowest salaries:
 
-```python
 df[df["Salary"] == df["Salary"].max()]
 df[df["Salary"] == df["Salary"].min()]
-```
 
-Additional salary-based filtering includes:
+Salary-based filtering was also performed:
 
-```python
 df[df["Salary"] > 70000]
 df[df["Salary"] < df["Salary"].mean()]
-```
 
----
+🎁 Total Salary Calculation
 
-## 🏢 Department & Region Analysis
+A fixed bonus of 5000 was added to the employee data:
 
-Employee distribution across departments and regions was examined using:
+df["bonus"] = 5000
 
-```python
+Total salary was then calculated as:
+
+df["Total_salary"] = df["Salary"] + df["bonus"]
+
+This derived field was used in the salary-related visualizations.
+
+🏢 Department & Region Analysis
+
+Employee distribution was analyzed using:
+
 df["Department_Region"].value_counts()
-```
 
-Specific department/region records can also be filtered using conditions such as:
+The project also demonstrates filtering specific department/region combinations:
 
-```python
 df[df["Department_Region"] == "Admin-California"]
-```
 
-Multiple department/region conditions were explored using:
+Multiple conditions were applied, for example:
 
-```python
 df[
     (df["Department_Region"] == "Admin-California") &
     (df["Salary"] > 60000)
 ]
-```
 
-The project also demonstrates filtering with `isin()` and `query()`.
+Other filtering techniques include:
 
----
+df["Department_Region"].isin(
+    ["Sales-Nevada", "Admin-California"]
+)
 
-## 🏠 Remote Work Analysis
+df["Salary"].between(40000, 70000)
 
-The dataset contains a `Remote_Work` field indicating whether an employee works remotely.
+df.query("Department_Region != 'Sales-Nevada'")
 
-The distribution was examined using:
+👤 Employee Status Analysis
 
-```python
-df["Remote_Work"].value_counts()
-```
+The dataset contains three employee-status categories:
 
-This allows the employee population to be separated into remote and non-remote work categories.
-
----
-
-## 📈 Employee Performance & Status
-
-The dataset includes:
-
-**Employee Status**
-
-```text
 Active
 Pending
 Inactive
-```
 
-and **Performance Score** categories such as:
+Status distribution was visualized using Matplotlib.
 
-```text
+The analysis helps understand the overall workforce status within the dataset.
+
+🏠 Remote Work Analysis
+
+The Remote_Work column contains Boolean values indicating remote-work status.
+
+The distribution was analyzed using:
+
+df["Remote_Work"].value_counts()
+
+A pie chart was created to visualize the work-mode distribution.
+
+The visualization file is named Employees Work Distribution.png in the project folder.
+
+⭐ Employee Performance Analysis
+
+Employee performance was analyzed using the Performance_Score column.
+
+The dataset contains performance categories such as:
+
 Excellent
 Good
 Average
 Poor
-```
 
-These attributes provide a foundation for understanding employee status and performance patterns within the organization.
+The distribution was visualized using a bar chart:
 
----
+df["Performance_Score"].value_counts().sort_index().plot(
+    kind="bar"
+)
 
-## 📊 Data Analysis Operations
+This provides an overview of employee performance categories across the dataset.
 
-The project demonstrates practical Pandas operations including:
+📊 Data Visualization
 
-* Column selection
-* Row selection
-* Conditional filtering
-* Multiple-condition filtering
-* Sorting
-* `isin()`
-* `between()`
-* `query()`
-* `value_counts()`
-* Missing-value handling
-* Duplicate detection
-* Duplicate removal
-* Descriptive statistics
-* Column creation
-* Data modification
-* Dataset export
+The project includes multiple Matplotlib visualizations.
 
-Examples:
+1. Number of Employees by Department
 
-```python
-df.sort_values("Age")
-df.sort_values("Salary")
-df.sort_values(["Age", "Salary"])
+Shows the number of employee records across the Department_Region categories.
 
-df["Department_Region"].value_counts()
+2. Average Salary by Age
 
-df["Remote_Work"].value_counts()
-```
+Calculates average Total_salary for each employee age:
 
----
+avg_salary = df.groupby("Age")["Total_salary"].mean()
 
-## 📦 Dataset Outputs
+A line chart is then used to visualize the result.
 
-After cleaning and analysis, the processed employee dataset is exported into three formats:
+3. Salary Distribution
 
-```python
-df.to_csv("Cleaned_Employee_dataset.csv", index=False)
+A histogram is used to understand the distribution of Total_salary values.
 
-df.to_excel("Cleaned_Employee_dataset.xlsx", index=False)
+4. Age vs Total Salary
+
+A scatter plot is used to visualize employee age against total salary.
+
+5. Employee Work Distribution
+
+A pie chart is created from the Remote_Work field to show the distribution of remote and non-remote employees.
+
+6. Employee Performance Score
+
+A bar chart displays the number of employees in each performance-score category.
+
+7. Employee Status Distribution
+
+A pie chart displays the distribution of Active, Pending, and Inactive employees.
+
+📤 Cleaned Dataset Export
+
+After cleaning and transformation, the processed dataset was exported into three formats.
+
+CSV
+
+df.to_csv(
+    "Cleaned_Employee_dataset.csv",
+    index=False
+)
+
+Excel
+
+df.to_excel(
+    "Cleaned_Employee_dataset.xlsx",
+    index=False
+)
+
+JSON
 
 df.to_json(
     "Cleaned_Employee_dataset.json",
     orient="records",
     indent=4
 )
-```
 
-This makes the cleaned data available for further analytics, reporting, visualization, or dashboard development.
+These files are stored inside:
 
----
+data/
+└── cleaned dataset/
 
-## 💡 Key Outcomes
+💡 Key Outcomes
 
-The project demonstrates a complete beginner-to-intermediate **Pandas-based employee data analysis workflow**.
+The project successfully demonstrates a practical employee data analytics workflow.
 
-### Major outcomes:
+Major outcomes:
 
-* Analyzed **1,020 employee records**.
-* Worked with **12 employee-related columns**.
-* Inspected employee demographic and organizational information.
-* Performed data filtering and conditional selection.
-* Identified and handled missing values.
-* Detected and removed duplicate records.
-* Performed salary-based descriptive statistics.
-* Analyzed department/region distribution.
-* Examined remote-work categories.
-* Created a bonus field and calculated total salary.
-* Exported the cleaned dataset into **CSV, Excel, and JSON** formats.
-* Built a structured foundation for further employee attrition and retention analysis.
+Analyzed 1,020 employee records.
 
----
+Worked with 12 employee-related columns.
 
-## 📋 Requirements
+Performed dataset inspection using Pandas.
 
-```text
+Applied row and column selection techniques.
+
+Performed conditional filtering and sorting.
+
+Identified and handled missing values.
+
+Detected and removed duplicate records.
+
+Calculated salary statistics.
+
+Created a bonus field and calculated Total_salary.
+
+Analyzed department/region distribution.
+
+Analyzed employee status.
+
+Analyzed remote-work distribution.
+
+Analyzed employee performance scores.
+
+Created multiple Matplotlib visualizations.
+
+Exported the cleaned dataset into CSV, Excel, and JSON formats.
+
+📦 Requirements
+
 Python
 Pandas
+Matplotlib
 Jupyter Notebook / Google Colab
 openpyxl
-```
 
 Install the required libraries:
 
-```bash
-pip install pandas openpyxl jupyter
-```
+pip install pandas matplotlib openpyxl jupyter
 
----
+▶️ Running the Project
 
-## ▶️ Running the Project
+1️⃣ Clone the Repository
 
-### 1️⃣ Clone the Repository
-
-```bash
 git clone <your-repository-url>
-cd employee-attrition-retention
-```
+cd Employee_Attrition_and_Retention
 
-### 2️⃣ Install Dependencies
+2️⃣ Install Dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
-### 3️⃣ Start Jupyter Notebook
+3️⃣ Start Jupyter Notebook
 
-```bash
 jupyter notebook
-```
 
-### 4️⃣ Open the Analysis Notebook
+4️⃣ Open the Analysis Notebook
 
 Open:
 
-```text
-notebooks/Employee_Attrition_and_Retention_Report.ipynb
-```
+notebook/
+└── Employee_Attrition_and_Retention_Report.ipynb
 
-Run the notebook cells sequentially to reproduce the data loading, cleaning, transformation, analysis, and export workflow.
+5️⃣ Run the Notebook
 
----
+Run the cells sequentially to reproduce:
 
-## 🎯 Project Objective
+Data Loading
+↓
+Data Inspection
+↓
+Data Cleaning
+↓
+Data Transformation
+↓
+Descriptive Analysis
+↓
+Visualization
+↓
+Dataset Export
 
-The primary objective of this project is to demonstrate a practical **employee data analytics workflow**, starting from a messy employee dataset and progressing through **data inspection, filtering, cleaning, transformation, descriptive analysis, and dataset export**.
+🎯 Project Objective
 
-The project demonstrates how Python and Pandas can be used to transform raw employee records into structured, analysis-ready data that can support further **employee attrition, retention, performance, salary, and workforce analysis**.
+The primary objective of this project is to demonstrate a complete Python-based employee data analytics workflow, starting from a messy employee dataset and progressing through data inspection, filtering, cleaning, transformation, descriptive analysis, visualization, and data export.
+
+The project provides a structured foundation for understanding employee workforce patterns related to department/region, salary, status, performance, age, and remote work, and can be extended further for advanced employee attrition and retention analysis.
