@@ -490,8 +490,8 @@ pip install pandas matplotlib jupyter
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd Employee-Attrition-and-Retention
+git clone https://github.com/kagawadesneha1104-ai/Employee_Attrition_and_Retention_Report.git
+cd Employee_Attrition_and_Retention_Report
 ```
 
 ### 2️⃣ Install Dependencies
