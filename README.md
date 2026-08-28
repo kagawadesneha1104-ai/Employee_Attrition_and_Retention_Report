@@ -7,7 +7,7 @@ The project uses **Python, Pandas, and Matplotlib** to clean, transform, analyze
 The analysis focuses on variables such as **age, department and region, employee status, joining date, salary, performance score, remote work, and total salary**, providing insights into employee distribution, compensation, performance, and work patterns.
 
 ---
-![alt text](<visualization/Employee Attrition & Retention Report.png>)
+![alt text](<Employee Attrition & Retention Report.png>)
 
 ## 🚀 Core Features
 
@@ -188,7 +188,6 @@ Employee-Attrition-and-Retention/
 ├── visualization/
 │   ├── Age vs Total Salary.png
 │   ├── Average Salary by Age.png
-│   ├── Employee Attrition & Retention Report.png
 │   ├── Employees Performance Score.png
 │   ├── Employees Status Distribution.png
 │   ├── Employees Work Distribution.png
